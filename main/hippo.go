@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/main/block.script"
+  component: "/scripts/Block.script"
   position {
     x: 0.0
     y: 0.0

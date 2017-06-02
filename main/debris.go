@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/main/debris.script"
+  component: "/scripts/Debris.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,7 +16,11 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/main/throwacrow.atlas\"\ndefault_animation: \"debrisWood_1\"\n"
+  data: "tile_set: \"/main/throwacrow.atlas\"\n"
+  "default_animation: \"debrisWood_1\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
   position {
     x: 0.0
     y: 0.0
