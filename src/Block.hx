@@ -44,7 +44,7 @@ class Block extends Script<BlockData> {
 				// if we are colliding with the ground we use own velocity and a fixed mass
 				//
 				var velocity = other_velocity;
-				if (message.group == GROUND) {
+				if (message.other_group == GROUND) {
 					velocity = Vmath.length(Go.get("#collisionobject", "linear_velocity"));
 					other_mass = 1000;
 				}

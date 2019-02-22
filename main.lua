@@ -438,7 +438,7 @@ Block.prototype.on_message = function(self,_self,message_id,message,_)
     local other_velocity = _hx_wrap_if_string_field(_G.vmath,'length')(_G.go.get(other_url, "linear_velocity"));
     local other_mass = _G.go.get(other_url, "mass");
     local velocity = other_velocity;
-    if (message.group == Block.GROUND) then 
+    if (message.other_group == Block.GROUND) then 
       velocity = _hx_wrap_if_string_field(_G.vmath,'length')(_G.go.get("#collisionobject", "linear_velocity"));
       other_mass = 1000;
     end;
@@ -1233,6 +1233,7 @@ local _hx_static_init = function()
   __defold_PhysicsMessages.apply_force = _G.hash("apply_force");
   __defold_PhysicsMessages.collision_response = _G.hash("collision_response");
   __defold_PhysicsMessages.contact_point_response = _G.hash("contact_point_response");
+  __defold_PhysicsMessages.ray_cast_missed = _G.hash("ray_cast_missed");
   __defold_PhysicsMessages.ray_cast_response = _G.hash("ray_cast_response");
   __defold_PhysicsMessages.request_velocity = _G.hash("request_velocity");
   __defold_PhysicsMessages.trigger_response = _G.hash("trigger_response");
@@ -1247,6 +1248,7 @@ local _hx_static_init = function()
   __defold_SysMessages.exit = _G.hash("exit");
   __defold_SysMessages.reboot = _G.hash("reboot");
   __defold_SysMessages.set_update_frequency = _G.hash("set_update_frequency");
+  __defold_SysMessages.set_vsync = _G.hash("set_vsync");
   __defold_SysMessages.start_record = _G.hash("start_record");
   __defold_SysMessages.stop_record = _G.hash("stop_record");
   __defold_SysMessages.toggle_physics_debug = _G.hash("toggle_physics_debug");
