@@ -47,7 +47,7 @@ class Throwacrow extends Script<ThrowacrowData> {
 		self.idle_frames = 0;		// the number of frames where the flung bird has been idle
 	}
 
-	override function final(_) {
+	override function final_(_) {
 		Msg.post(".", GoMessages.release_input_focus);
 		Msg.post("camera", CameraMessages.release_camera_focus);
 	}

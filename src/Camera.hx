@@ -13,7 +13,7 @@ class Camera extends defold.support.Script<CameraData> {
 		self.initial_position = Go.get_position();
 	}
 
-	override function final(_)
+	override function final_(_)
 		Msg.post("#camera", CameraMessages.release_camera_focus);
 
 	override function update(self:CameraData, _) {

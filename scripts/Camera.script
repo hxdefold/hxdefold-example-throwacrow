@@ -9,7 +9,7 @@ function init(self)
 end
 
 function final(_)
-	script:final(_)
+	script:final_(_)
 end
 
 function update(self, _)
