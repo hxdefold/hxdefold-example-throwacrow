@@ -1,5 +1,3 @@
 {
-    "haxe.displayConfigurations": [
-        ["build.hxml"]
-    ]
+	"haxe.enableCompilationServer": false
 }
